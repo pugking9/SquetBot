@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/SquetBot/ffmpeg.exe
+/SquetBot/libsodium.dll
+/SquetBot/opus.dll
