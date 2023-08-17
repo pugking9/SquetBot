@@ -4,10 +4,30 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Discord.WebSocket;
 using System.Collections;
+<<<<<<< HEAD
 using SquetBot.Helpers;
 
 namespace SquetBot
 {
+=======
+
+namespace SquetBot
+{
+    public class Track
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public string StreamUrl { get; set; }
+
+        public Track(string title, string url, string streamUrl)
+        {
+            Title = title;
+            Url = url;
+            StreamUrl = streamUrl;
+        }
+    }
+
+>>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
     public class Queue
     {
         public bool _playing { get; set; }

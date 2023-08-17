@@ -4,7 +4,10 @@ using Discord.WebSocket;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+<<<<<<< HEAD
 using Microsoft.Extensions;
+=======
+>>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
 using Microsoft.Extensions.Configuration;
 
 namespace SquetBot

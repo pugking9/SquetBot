@@ -3,7 +3,10 @@ using Discord.WebSocket;
 using System.Threading.Tasks;
 using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
+<<<<<<< HEAD
 using SquetBot.Helpers;
+=======
+>>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
 
 namespace SquetBot.Modules
 {
