@@ -38,7 +38,7 @@ namespace SquetBot
         private async Task ReadyAsync()
         {
             if(Program.IsDebug())
-                await _interactionService.RegisterCommandsToGuildAsync(ulong.Parse(_configuration["Guild"]), true);
+                await _interactionService.RegisterCommandsToGuildAsync(ulong.Parse(_configuration["GUILD_ID"]), true);
             else
                 await _interactionService.RegisterCommandsGloballyAsync(true);
         }

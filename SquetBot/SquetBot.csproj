@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk;Microsoft.NET.Sdk.Publish">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -9,16 +9,12 @@
     <PackageReference Include="Discord.Net" Version="3.12.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
-<<<<<<< HEAD
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
-=======
->>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="YoutubeExplode" Version="6.3.1" />
     <PackageReference Include="YoutubeExplode.Converter" Version="6.3.1" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -32,23 +28,21 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-=======
->>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="ffmpeg.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="libsodium.dll">
-<<<<<<< HEAD
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="opus.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-=======
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="opus.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
->>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
     </None>
   </ItemGroup>
 </Project>

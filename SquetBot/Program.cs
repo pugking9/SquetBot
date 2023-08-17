@@ -4,10 +4,6 @@ using Discord.WebSocket;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
-<<<<<<< HEAD
-using Microsoft.Extensions;
-=======
->>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
 using Microsoft.Extensions.Configuration;
 
 namespace SquetBot
@@ -16,13 +12,6 @@ namespace SquetBot
     {
         private readonly IConfiguration _configuration;
         private readonly IServiceProvider _serviceProvider;
-
-        // Configuring the DiscordSocketClient to define its behavior
-        private readonly DiscordSocketConfig _socketConfig = new DiscordSocketConfig()
-        {
-            GatewayIntents = GatewayIntents.AllUnprivileged | GatewayIntents.GuildMembers,
-            MessageCacheSize = 100
-        };
 
         public Program()
         {
@@ -35,7 +24,7 @@ namespace SquetBot
         static IConfiguration ConfigBuilder()
         {
             var builder = new ConfigurationBuilder()
-                .AddEnvironmentVariables("Squet"); // Configure the builder to add environment variables prefixed with "Squet"
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true); // Configure the builder to add appsettings.json
 
             return builder.Build(); // Build and return the configuration
         }
@@ -75,7 +64,7 @@ namespace SquetBot
             await _serviceProvider.GetRequiredService<InteractionHandler>()
                 .InitializeAsync(); // Initialize the interaction handler
 
-            var _token = _configuration["Token"]; // Retrieve the bot token from configuration settings
+            var _token = _configuration["TOKEN"]; // Get the bot token from the configuration
 
             await client.LoginAsync(TokenType.Bot, _token); // Log in to Discord using the bot token
             await client.StartAsync(); // Start the Discord client

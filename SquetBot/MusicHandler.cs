@@ -4,12 +4,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Discord.WebSocket;
 using System.Collections;
-<<<<<<< HEAD
-using SquetBot.Helpers;
-
-namespace SquetBot
-{
-=======
 
 namespace SquetBot
 {
@@ -27,7 +21,7 @@ namespace SquetBot
         }
     }
 
->>>>>>> d3160616d2a2c2e2328400c03da76559bc0ac49d
+
     public class Queue
     {
         public bool _playing { get; set; }
